@@ -2,18 +2,27 @@ import { PageContext } from './Header';
 import { useContext } from 'react';
 
 export default function Movies() {
-  const { data } = useContext(PageContext);
+  const { data, getMovie , movie } = useContext(PageContext);
   
+  function handleClick(x) {
+    console.log(x);
+    getMovie(prevMovie => {
+        console.log([...prevMovie, x]);
+        return [...prevMovie, x];
+        
+    });
+}
+
   return(
     <div className="container">
       <div className="recommend-area">
-          <h2>Recommended for you</h2>
+          <h2>Movies</h2>
           <div className="recommend-grid">
               {data.map(x => {
                 return (
                 (x.type === 'movie' &&
                 <div className="recommend-cards"> 
-                       <img className="pos-abs" src="/assets/images/empty-bookmark.svg" /> 
+                       <img className="pos-abs" src="/assets/images/empty-bookmark.svg" onClick={() => handleClick(x)}/> 
                   <img className="pos-rel" src={x.image}/>
                   <div className="card-detail">
                     <h6>{x.release_date}</h6>

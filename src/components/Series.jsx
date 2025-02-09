@@ -7,7 +7,7 @@ export default function Series() {
   return(
     <div className="container">
        <div className="recommend-area">
-          <h2>Recommended for you</h2>
+          <h2>Tv Series</h2>
           <div className="recommend-grid">
               
               {data.map(x => {

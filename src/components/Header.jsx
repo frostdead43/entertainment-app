@@ -9,7 +9,9 @@ export const PageContext = createContext(null);
 export default function Header() {
   const [url,setUrl] = useState(location.hash.substring(1) || '' );
   const [data,setData] = useState([]);
-  
+  const [movie,getMovie] = useState([]);
+  const [series,getSeries] = useState([]);
+
   const router = [
     {
       url:'/',
@@ -17,7 +19,7 @@ export default function Header() {
     },
     {
       url:'/movies',
-      component:<Movies />
+      component:<Movies/>
     },
     {
       url:'/series',
@@ -58,8 +60,6 @@ export default function Header() {
   console.log(data);
   const page = getPage(url) || { component: <Home /> };
 
-
-
   return(
     <>
       <header>
@@ -72,7 +72,7 @@ export default function Header() {
         </div>
         <img src="./assets/images/user-icon.svg"/>
       </header>
-        <PageContext.Provider value={{url, data}}>
+        <PageContext.Provider value={{url, data, movie , getMovie}}>
           <input type="text" placeholder="sadsd" />
           {page.component}  
         </PageContext.Provider>

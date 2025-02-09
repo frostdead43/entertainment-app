@@ -34,9 +34,7 @@ export default function Home() {
               {data.map(x => {
                 return (
                 <div className="recommend-cards">
-                    
-                       <img className="pos-abs" src="/assets/images/empty-bookmark.svg" />
-                   
+                  <img className="pos-abs" src="/assets/images/empty-bookmark.svg" />
                   <img className="pos-rel" src={x.image}/>
                   <div className="card-detail">
                     <h6>{x.release_date}</h6>
