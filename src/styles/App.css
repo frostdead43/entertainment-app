@@ -1,0 +1,150 @@
+header {
+  background-color: rgba(22, 29, 47, 1);
+  display: flex;
+  padding: 18px 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-tags {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.container {
+  padding: 16px;
+  
+}
+
+input {
+  color: rgba(255, 255, 255, 1);
+  margin: 26px 16px;
+  background: url("./assets/images/search-icon.svg") no-repeat center left 5%;
+  padding-left: 40px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.16px;
+  letter-spacing: 0px;
+  outline: none;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+.trending-area h2 {
+  padding-inline: 16px;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25.2px;
+  letter-spacing: -0.31px;
+}
+
+.trending-card {
+  display: flex;
+  overflow-x: auto; 
+  gap: 18px;
+  scroll-behavior: smooth;
+  padding: 16px;
+  scrollbar-width: thin;
+  white-space: nowrap;
+}
+
+.w {
+  position: relative; 
+  flex-shrink: 0;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-end; 
+}
+
+.trending-img {
+  width: 240px;
+  height: 140px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.info {
+  position: absolute;
+  bottom: 30px;
+  display: flex; 
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.info h6 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15.12px;
+  letter-spacing: 0px;
+}
+
+.recommend-area {
+  padding: 16px;
+}
+.recommend-area h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25.2px;
+  letter-spacing: -0.31px;
+  margin-bottom: 16px;
+}
+
+.recommend-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 16px;
+}
+
+.recommend-cards img {
+  width: 184px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-detail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-detail h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.64px;
+  letter-spacing: 0px;
+
+}
+
+.card-detail h6 {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13.86px;
+  letter-spacing: 0px;
+}
+
+.recommend-cards .pos-abs {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  inset-inline: 78%;
+  inset-block: 3%;
+  
+}
+
+.recommend-cards {
+  position: relative;
+}
+
